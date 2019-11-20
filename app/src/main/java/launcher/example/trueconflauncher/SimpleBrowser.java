@@ -1,12 +1,10 @@
-package com.example.trueconflauncher;
+package launcher.example.trueconflauncher;
 
 import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DownloadManager;
 import android.content.ActivityNotFoundException;
-import android.content.BroadcastReceiver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -22,9 +20,11 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
+import com.example.trueconflauncher.R;
+
 import java.io.File;
 
-import static com.example.trueconflauncher.LauncherActivity.PERMISSION_CODE;
+import static launcher.example.trueconflauncher.LauncherActivity.PERMISSION_CODE;
 
 public class SimpleBrowser extends AppCompatActivity {
     private String fileName = "";
