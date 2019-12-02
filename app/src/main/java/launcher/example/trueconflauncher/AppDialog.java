@@ -13,10 +13,10 @@ import com.example.trueconflauncher.R;
 
 import java.util.List;
 
-public class NoTrueConfAppDialog extends DialogFragment {
+public class AppDialog extends DialogFragment {
 
-    public static NoTrueConfAppDialog newInstance() {
-        NoTrueConfAppDialog frag = new NoTrueConfAppDialog();
+    public static AppDialog newInstance() {
+        AppDialog frag = new AppDialog();
         return frag;
     }
 
@@ -27,11 +27,11 @@ public class NoTrueConfAppDialog extends DialogFragment {
 
         return new AlertDialog.Builder(getActivity())
                 .setTitle(R.string.trueconf_application_not_found)
-                .setPositiveButton(R.string.install,
+                .setPositiveButton(R.string.download,
                         (dialog, whichButton) -> {
                             Intent openLinckIntent;
                             if(isGoogleServicesAvailable){
-                                openLinckIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(LauncherActivity.TC_GOOGLE_PLAY_LINK));
+                                openLinckIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(LauncherActivity.TRUECONF_GOOGLE_PLAY_LINK));
                                 startActivity(openLinckIntent);
                             }else{
                                 if(!isInstalledBrowser());
@@ -54,7 +54,7 @@ public class NoTrueConfAppDialog extends DialogFragment {
 
     private boolean isInstalledBrowser() {
         Intent intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(LauncherActivity.TC_LINK));
+        intent.setData(Uri.parse(LauncherActivity.TRUECONF_WEB_LINK));
         List<ResolveInfo> browserList = getActivity().getPackageManager().queryIntentActivities(intent, 0);
         return !browserList.isEmpty();
     }

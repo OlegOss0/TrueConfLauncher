@@ -1,9 +1,10 @@
 <resources>
-    <string name="app_name">TrueConfLauncher</string>
+    <string name="app_name">TrueConf Launcher</string>
     <string name="trueconf_application_not_found">TrueConf application not found</string>
     <string name="request_permission_message_text">Required permission to write external storage to save download file.</string>
     <string name="permission_message_title">Please Grand Write Permission</string>
-    <string name="install">Install</string>
+    <string name="download">Download?</string>
     <string name="cancel">Cancel</string>
     <string name="ok">Ok</string>
+    <string name="downloading">Starting download...</string>
 </resources>
