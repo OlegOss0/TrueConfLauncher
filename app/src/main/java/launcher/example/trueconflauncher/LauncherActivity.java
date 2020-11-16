@@ -93,5 +93,9 @@ public class LauncherActivity extends AppCompatActivity {
         List<ResolveInfo> browserList = getPackageManager().queryIntentActivities(intent, 0);
         return !browserList.isEmpty();
     }
+
+    @Override
+    public void onBackPressed() {
+    }
 }
 
